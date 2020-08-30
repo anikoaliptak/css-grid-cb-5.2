@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Source+Sans+Pro:wght@300&display=swap');
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav main aside"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 15px;
+  height: 100vh;
+  background-color: #e6e6ff;
+}
+.header {
+  grid-area: header;
+  background-color: #8585ad;
+  font-family: 'Libre Baskerville', fantasy;
+  text-align: center;
+  font-size: 2.25rem;
+  color: #fff;
+  padding: 1.75rem;
+}
+
+.nav {
+  grid-area: nav;
+  margin-left: 0.5rem;
+  background-color: #8585ad;
+  color: #fff;
+  padding: 1.15rem;
+  line-height: 1.25rem;
+}
+
+.main {
+  grid-area: main;
+  background-color: #e6e6ff;
+  line-height: 1.15rem
+}
+
+.aside {
+  grid-area: aside;
+  margin-right: 0.5rem;
+  background-color: #8585ad;
+  color: #fff;
+  padding: 1.15rem;
+  line-height: 1.25rem;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #29293d;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+  margin: 1.15rem auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas: 
+      "header"
+      "nav"
+      "main"
+      "aside"
+      "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 50px 1fr 50px 70px;
+  }
+  .header {
+    font-size: 1.5rem;
+    line-height: normal;
+  }
+  .main {
+    padding: 0.5rem;
+  }
+  .aside {
+    margin-right: 0;
+  }
+  .nav {
+    margin-left: 0;
+  }
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .header {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  .aside {
+    font-size: 1rem;
+  }
+}
+
+
+
